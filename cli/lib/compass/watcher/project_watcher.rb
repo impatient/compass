@@ -46,7 +46,7 @@ module Compass
       end
 
       def directories_to_watch
-        remove_redundant_directories([Compass.configuration.sass_path] + Compass.configuration.watch_load_paths.map{|p| p.respond_to?(:root) ? p.root : nil}.compact)
+	[Compass.configuration.sass_path] + Compass.configuration.watch_load_paths.map{|p| p.respond_to?(:root) ? p.root : nil}.compact
       end
 
       #blatantly copied from sass (lib/sass/plugin/compiler.rb#L327-L342)
